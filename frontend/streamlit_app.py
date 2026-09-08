@@ -82,22 +82,22 @@ with st.sidebar:
 
 # App Header
 st.markdown("""
-<div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #334155; margin-bottom: 1.5rem;">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #e2e8f0; margin-bottom: 1.5rem;">
     <div>
-        <h1 style="margin: 0; font-size: 1.95rem; font-weight: 800; color: #f8fafc; display: flex; align-items: center; gap: 10px;">
+        <h1 style="margin: 0; font-size: 1.95rem; font-weight: 800; color: #0f172a; display: flex; align-items: center; gap: 10px;">
             <span>🎯 TalentMatch AI</span>
-            <span style="font-size: 0.75rem; background: #1e293b; color: #38bdf8; border: 1px solid #38bdf840; padding: 3px 10px; border-radius: 20px; font-weight: 600;">PORTFOLIO EDITION</span>
+            <span style="font-size: 0.75rem; background: #eff6ff; color: #2563eb; border: 1px solid #bfdbfe; padding: 3px 10px; border-radius: 20px; font-weight: 600;">PORTFOLIO EDITION</span>
         </h1>
-        <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 0.95rem;">
+        <p style="margin: 4px 0 0 0; color: #475569; font-size: 0.95rem;">
             Explainable Candidate-Job Compatibility & Talent Intelligence Platform
         </p>
         <div style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
-            Crafted by <a href="https://github.com/KodakandlaSahtihi-29" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Sahithi Kodakandla</a> • GITAM University
+            Crafted by <a href="https://github.com/KodakandlaSahtihi-29" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">Sahithi Kodakandla</a> • GITAM University
         </div>
     </div>
     <div style="text-align: right;">
         <span style="display: inline-block; width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-right: 6px;"></span>
-        <span style="color: #cbd5e1; font-size: 0.85rem; font-weight: 500;">NLP Engine Active</span>
+        <span style="color: #334155; font-size: 0.85rem; font-weight: 500;">NLP Engine Active</span>
     </div>
 </div>
 """, unsafe_allow_html=True)
@@ -245,7 +245,7 @@ with tab_match:
         
         with col_main_score:
             st.markdown(f"""
-            <div class="tm-metric-card" style="border-left: 5px solid {score_color}; background: #172554;">
+            <div class="tm-metric-card" style="border: 1px solid #e2e8f0; border-left: 5px solid {score_color}; background: #f8fafc;">
                 <div class="tm-metric-label">Overall Match Score</div>
                 <div class="tm-metric-value" style="color: {score_color};">{overall:.1f}%</div>
                 <div class="tm-metric-sub">Multi-stage Explainable Hybrid</div>
@@ -570,10 +570,10 @@ with tab_eval:
 # DEVELOPER FOOTER
 # ---------------------------------------------------------
 st.markdown("""
-<div style="margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #334155; text-align: center; color: #64748b; font-size: 0.85rem;">
-    <p style="margin-bottom: 0.35rem; color: #94a3b8;">
+<div style="margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #e2e8f0; text-align: center; color: #64748b; font-size: 0.85rem;">
+    <p style="margin-bottom: 0.35rem; color: #334155;">
         <strong>TalentMatch AI</strong> — Designed & Engineered by 
-        <a href="https://github.com/KodakandlaSahtihi-29" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Sahithi Kodakandla</a>
+        <a href="https://github.com/KodakandlaSahtihi-29" target="_blank" style="color: #2563eb; text-decoration: none; font-weight: 600;">Sahithi Kodakandla</a>
     </p>
     <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
         B.Tech Computer Science & Engineering • GITAM University | Built with Python, FastAPI, NLTK, Gensim & Streamlit

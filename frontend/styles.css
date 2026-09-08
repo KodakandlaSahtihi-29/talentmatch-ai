@@ -1,4 +1,4 @@
-/* TalentMatch AI - Modern Enterprise Analytics Stylesheet */
+/* TalentMatch AI - Modern Light Theme Stylesheet */
 
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
 
@@ -6,46 +6,48 @@
   --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
   
-  --bg-main: #0f172a;
-  --bg-card: #1e293b;
-  --bg-card-hover: #24344d;
-  --border-card: #334155;
+  --bg-main: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-card-hover: #f1f5f9;
+  --border-card: #e2e8f0;
   
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
   --text-muted: #64748b;
   
-  --accent-blue: #3b82f6;
-  --accent-cyan: #06b6d4;
-  --accent-emerald: #10b981;
-  --accent-amber: #f59e0b;
-  --accent-rose: #f43f5e;
+  --accent-blue: #2563eb;
+  --accent-cyan: #0284c7;
+  --accent-emerald: #059669;
+  --accent-amber: #d97706;
+  --accent-rose: #e11d48;
 }
 
 html, body, [class*="css"] {
   font-family: var(--font-sans) !important;
+  color: var(--text-primary);
 }
 
-/* Custom Metric Card */
+/* Custom Metric Card (Light Mode) */
 .tm-metric-card {
-  background: #1e293b;
-  border: 1px solid #334155;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 1.25rem;
   margin-bottom: 1rem;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06), 0 1px 2px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
 .tm-metric-card:hover {
-  border-color: #475569;
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
 }
 
 .tm-metric-label {
-  font-size: 0.825rem;
+  font-size: 0.8rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #94a3b8;
+  color: #64748b;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
@@ -53,85 +55,92 @@ html, body, [class*="css"] {
 .tm-metric-value {
   font-size: 2.2rem;
   font-weight: 800;
-  color: #f8fafc;
+  color: #0f172a;
   line-height: 1.1;
 }
 
 .tm-metric-sub {
   font-size: 0.8rem;
-  color: #64748b;
+  color: #94a3b8;
   margin-top: 0.35rem;
 }
 
-/* Match Type Badges */
+/* Match Type Badges (Light Mode) */
 .badge-exact {
-  background-color: rgba(16, 185, 129, 0.15);
-  color: #34d399;
-  border: 1px solid rgba(16, 185, 129, 0.3);
-  padding: 2px 8px;
+  background-color: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  padding: 3px 10px;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   font-weight: 600;
 }
 
 .badge-fuzzy {
-  background-color: rgba(245, 158, 11, 0.15);
-  color: #fbbf24;
-  border: 1px solid rgba(245, 158, 11, 0.3);
-  padding: 2px 8px;
+  background-color: #fffbeb;
+  color: #b45309;
+  border: 1px solid #fde68a;
+  padding: 3px 10px;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   font-weight: 600;
 }
 
 .badge-semantic {
-  background-color: rgba(59, 130, 246, 0.15);
-  color: #60a5fa;
-  border: 1px solid rgba(59, 130, 246, 0.3);
-  padding: 2px 8px;
+  background-color: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 3px 10px;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   font-weight: 600;
 }
 
 .badge-missing {
-  background-color: rgba(244, 63, 94, 0.15);
-  color: #fb7185;
-  border: 1px solid rgba(244, 63, 94, 0.3);
-  padding: 2px 8px;
+  background-color: #fff1f2;
+  color: #be123c;
+  border: 1px solid #fecdd3;
+  padding: 3px 10px;
   border-radius: 6px;
-  font-size: 0.75rem;
+  font-size: 0.775rem;
   font-weight: 600;
 }
 
-/* Explainability Signal Boxes */
+/* Explainability Signal Boxes (Light Mode) */
 .signal-positive {
-  background: rgba(16, 185, 129, 0.08);
+  background: #ecfdf5;
   border-left: 4px solid #10b981;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   border-radius: 0 8px 8px 0;
   margin-bottom: 0.6rem;
-  color: #e2e8f0;
+  color: #065f46;
   font-size: 0.9rem;
+  border-top: 1px solid #d1fae5;
+  border-right: 1px solid #d1fae5;
+  border-bottom: 1px solid #d1fae5;
 }
 
 .signal-negative {
-  background: rgba(244, 63, 94, 0.08);
+  background: #fff1f2;
   border-left: 4px solid #f43f5e;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.1rem;
   border-radius: 0 8px 8px 0;
   margin-bottom: 0.6rem;
-  color: #e2e8f0;
+  color: #9f1239;
   font-size: 0.9rem;
+  border-top: 1px solid #ffe4e6;
+  border-right: 1px solid #ffe4e6;
+  border-bottom: 1px solid #ffe4e6;
 }
 
-/* Recommendation Card */
+/* Recommendation Card (Light Mode) */
 .rec-card {
-  background: #1e293b;
-  border: 1px solid #334155;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 1rem 1.2rem;
   margin-bottom: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
 }
 
 .rec-header {
@@ -142,23 +151,32 @@ html, body, [class*="css"] {
 }
 
 .priority-high {
-  color: #f43f5e;
+  color: #be123c;
+  background: #ffe4e6;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   text-transform: uppercase;
 }
 
 .priority-medium {
-  color: #f59e0b;
+  color: #b45309;
+  background: #fef3c7;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   text-transform: uppercase;
 }
 
 .priority-low {
-  color: #3b82f6;
+  color: #1d4ed8;
+  background: #dbeafe;
+  padding: 2px 8px;
+  border-radius: 4px;
   font-weight: 700;
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   text-transform: uppercase;
 }
 

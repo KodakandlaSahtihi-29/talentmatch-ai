@@ -18,7 +18,8 @@ models_cache/
 .pytest_cache/
 
 # Streamlit and Logs
-.streamlit/
+.streamlit/*
+!.streamlit/config.toml
 *.log
 
 # OS Generated
