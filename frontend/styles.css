@@ -184,3 +184,13 @@ html, body, [class*="css"] {
 code, pre {
   font-family: var(--font-mono) !important;
 }
+
+/* Hide Default Streamlit Developer Branding & Deploy Buttons */
+#MainMenu { visibility: hidden; display: none !important; }
+header { visibility: hidden; display: none !important; }
+footer { visibility: hidden; display: none !important; }
+.stDeployButton { display: none !important; }
+[data-testid="stToolbar"] { display: none !important; }
+[data-testid="stDecoration"] { display: none !important; }
+[data-testid="stStatusWidget"] { display: none !important; }
+
