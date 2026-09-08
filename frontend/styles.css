@@ -185,12 +185,31 @@ code, pre {
   font-family: var(--font-mono) !important;
 }
 
-/* Hide Default Streamlit Developer Branding & Deploy Buttons */
-#MainMenu { visibility: hidden; display: none !important; }
-header { visibility: hidden; display: none !important; }
-footer { visibility: hidden; display: none !important; }
-.stDeployButton { display: none !important; }
-[data-testid="stToolbar"] { display: none !important; }
+/* Hide Deploy Button & Developer Watermark while preserving Sidebar Toggle */
+header[data-testid="stHeader"] {
+  background: transparent !important;
+}
+
+/* Keep Sidebar toggle button always accessible */
+[data-testid="stSidebarCollapseButton"], 
+button[kind="header"],
+[data-testid="stSidebarCollapsedControl"] {
+  visibility: visible !important;
+  display: inline-flex !important;
+  color: #0f172a !important;
+}
+
+/* Hide ONLY the Deploy button and three-dots menu */
+.stDeployButton, [data-testid="stDeployButton"] { display: none !important; }
+#MainMenu { visibility: hidden !important; display: none !important; }
+footer { visibility: hidden !important; display: none !important; }
 [data-testid="stDecoration"] { display: none !important; }
 [data-testid="stStatusWidget"] { display: none !important; }
+
+/* Ensure Sidebar is styled cleanly in light mode */
+[data-testid="stSidebar"] {
+  background-color: #ffffff !important;
+  border-right: 1px solid #e2e8f0 !important;
+}
+
 
