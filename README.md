@@ -6,9 +6,13 @@
 [![NLTK](https://img.shields.io/badge/NLP-NLTK%20%7C%20Scikit--Learn%20%7C%20Gensim-brightgreen.svg)](https://www.nltk.org/)
 [![PostgreSQL](https://img.shields.io/badge/Database-PostgreSQL%20%7C%20SQLite-336791.svg)](https://www.postgresql.org/)
 
-**TalentMatch AI** is a production-style Natural Language Processing (NLP) web application that analyzes candidate resumes against Job Descriptions (JDs) to deliver an **explainable, multi-dimensional compatibility assessment**, skill-gap diagnosis, and actionable ethical recommendations.
+> **Designed & Engineered by [Sahithi Kodakandla](https://github.com/KodakandlaSahtihi-29)**  
+> *B.Tech in Computer Science and Engineering — GITAM University, Visakhapatnam*  
+> [GitHub](https://github.com/KodakandlaSahtihi-29) • [LinkedIn](https://linkedin.com/in/sahithi-kodakandla) • [Email](mailto:sahithikodakandla594@gmail.com)
 
-Rather than treating matching as a naive keyword-counting exercise, the platform pairs **classical NLP linguistics** (Morphology, WordNet POS-guided Lemmatization, Levenshtein Edit Distance, Penn Treebank POS distribution, N-gram collocations) with **vector semantics** (Scikit-Learn TF-IDF, Gensim Word2Vec continuous bag-of-words document embeddings, and Cosine Similarity).
+**TalentMatch AI** is an explainable Natural Language Processing (NLP) intelligence platform that analyzes candidate resumes against Job Descriptions (JDs) to deliver a **transparent, multi-dimensional compatibility assessment**, skill-gap diagnosis, and actionable career recommendations.
+
+Rather than treating matching as a naive keyword-counting exercise, the platform pairs **classical computational linguistics** (Morphology, WordNet POS-guided Lemmatization, Levenshtein Edit Distance, Penn Treebank syntactic distribution, N-gram collocations) with **continuous vector semantics** (Scikit-Learn TF-IDF, Gensim Word2Vec document embeddings, and Cosine Similarity).
 
 ---
 
@@ -59,44 +63,31 @@ flowchart TD
     subgraph Persistence["6. Storage & User Interfaces"]
         SCORE & REC & WHY --> DB[(PostgreSQL / SQLite)]
         DB --> API[FastAPI REST API]
-        API --> UI[Streamlit Enterprise Analytics Dashboard]
+        DB --> UI[Streamlit Enterprise Analytics Dashboard]
     end
 ```
 
 ---
 
-## 2. Academic NLP Curriculum Concepts (Units 1 to 5)
+## 2. Core NLP Architecture & Linguistic Engineering
 
-TalentMatch AI directly demonstrates foundational and advanced concepts taught in undergraduate and graduate NLP curricula:
+TalentMatch AI is engineered to address the specific failure modes of traditional ATS screeners through computational linguistics:
 
-### Unit 1: Words, Morphology & Lexical Analysis
-* **Regular Expressions**: Domain regex safeguarding technical terms with symbols (`C++`, `C#`, `.NET`, `Node.js`, `CI/CD`, `PL/SQL`) from destructive sanitization.
-* **Tokenization**: NLTK sentence (`sent_tokenize`) and word tokenization handling multi-line resume structures.
-* **Morphology, Lemmatization & Stemming**: WordNet Lemmatizer with Treebank POS tag mapping to reduce verbs and nouns to dictionary lemmas (`developing` $\to$ `develop`, `services` $\to$ `service`). Porter Stemmer is integrated as an educational comparison module.
-* **Levenshtein Edit Distance**: Dynamic programming minimum edit distance algorithm computing char-level transformations, cost matrices, and normalized similarities to resolve resume typos (e.g., `pyhton` $\to$ `python`, `posgresql` $\to$ `postgresql`).
-* **N-Grams & Collocations**: Generates contiguous unigrams, bigrams, and trigrams to detect multi-word technical concepts (`machine learning`, `natural language processing`, `rest api`).
+### Lexical Analysis & Morphology (NLTK)
+* **Domain-Specific Symbol Preservation**: Technical terms with programming symbols (`C++`, `C#`, `.NET`, `Node.js`, `CI/CD`, `PL/SQL`) are shielded via custom regex from standard punctuation stripping.
+* **POS-Guided WordNet Lemmatization**: Integrates WordNet lemmatization mapped to Treebank POS tags (`developing` $\to$ `develop`, `services` $\to$ `service`). This avoids destructive word truncation common in Porter Stemming while accurately mapping inflected forms back to dictionary lemmas.
+* **Levenshtein Dynamic Programming Matrix**: Resolves spelling variations and resume typos (e.g. `pyhton` $\to$ `python`, `posgresql` $\to$ `postgresql`) using minimum edit distance with a tuned similarity threshold ($\ge 0.82$).
+* **N-gram Collocation Extraction**: Generates unigram, bigram, and trigram phrases to accurately recognize multi-token technical competencies (`machine learning`, `natural language processing`, `rest api`).
 
-### Unit 2: Part-of-Speech (POS) Tagging & Syntax
-* **Averaged Perceptron Tagger**: NLTK POS tagging mapping tokens to the Penn Treebank tagset.
-* **Syntactic Distribution Metrics**: Quantitative distribution metrics (Nouns %, Verbs %, Adjectives %, Adverbs %, Others %) highlighting technical density in candidate descriptions.
-* **Action Verb Extraction**: Identifies impactful accomplishment verbs (`architected`, `optimized`, `implemented`, `deployed`) to evaluate project experience statements.
-* **Out-Of-Vocabulary (OOV) Resilience**: Graceful fallback handling for domain-specific terminology.
+### Syntactic Profiling & Action Verbs
+* **Penn Treebank Tagging**: Employs an Averaged Perceptron POS tagger to categorize sentence constituents across candidate project bullets.
+* **Action Verb Density**: Identifies high-impact technical accomplishment verbs (`architected`, `optimized`, `implemented`, `deployed`) to evaluate project rigor.
+* **Distributional Syntactic Metrics**: Quantifies Noun %, Verb %, and Adjective % ratios to assess substantive technical description versus filler keywords.
 
-### Unit 3: Syntactic Analysis & Context-Free Grammars (Educational Module)
-* **Constituency & Phrase Structure**: Demonstrates Context-Free Grammar (CFG) constituent decomposition ($S \to NP\ VP$, $NP \to \text{Det}\ N$, $VP \to V\ NP$).
-* **Structural Ambiguity & CKY Parsing**: Interactive sandbox illustrating Cocke-Younger-Kasami (CKY) and Probabilistic CFG concepts. Explains why resume intelligence relies on phrase chunking and vector semantics rather than fragile full-tree parsing.
-
-### Unit 4: Vector Semantics, TF-IDF & Word2Vec Embeddings
-* **TF-IDF Lexical Similarity**: Scikit-learn `TfidfVectorizer(ngram_range=(1,2), sublinear_tf=True)` with cosine similarity evaluating exact keyword overlap.
-* **Continuous Vector Space Embeddings**: Gensim Word2Vec continuous bag-of-words (CBOW) model trained on technical corpus (`data/sample_corpus.txt`) generating 100-dimensional embeddings.
-* **Document Pooling & Cosine Similarity**: Mean vector pooling of in-vocabulary tokens computing dense vector angle metrics.
-* **Distributional Hypothesis**: Demonstrates vector proximity (e.g. `fastapi` $\approx$ `flask`, `pytorch` $\approx$ `tensorflow`).
-
-### Unit 5: Semantic Relevance & Text Coherence
-* **Sentence-Level Alignment**: Action-verb and TF-IDF matching between JD requirement sentences and candidate project accomplishment bullets.
-* **Education Matching**: Educational degree hierarchy detection (PhD > Masters > Bachelors > Associate) with field-of-study relevance scoring.
-
----
+### Dual-Vector Semantic Similarity
+* **TF-IDF Lexical Similarity**: Scikit-learn `TfidfVectorizer(ngram_range=(1,2), sublinear_tf=True)` measuring vocabulary overlap with sublinear term-frequency dampening.
+* **Continuous Vector Space (Gensim Word2Vec)**: 100-dimensional continuous bag-of-words (CBOW) embeddings trained on technical corpus. Maps related technologies into proximal vector space (e.g. `fastapi` $\approx$ `flask`, `pytorch` $\approx$ `tensorflow`).
+* **Document Vector Pooling**: Generates dense document-level representations using mean vector pooling of in-vocabulary tokens.
 
 ## 3. Empirical Model Evaluation & Comparison Experiment
 
@@ -146,7 +137,7 @@ Where:
 
 1. **Clone the repository**:
    ```powershell
-   git clone https://github.com/your-username/talentmatch-ai.git
+   git clone https://github.com/KodakandlaSahtihi-29/talentmatch-ai.git
    cd talentmatch-ai
    ```
 
@@ -201,19 +192,18 @@ docker-compose up --build
 | `GET` | `/api/analysis/{id}` | Fetch structured analysis record by ID |
 | `GET` | `/api/analysis/history` | Retrieve chronological match history |
 | `GET` | `/api/health` | Service health status and engine readiness |
-| `GET` | `/api/analysis/academic/*` | Academic NLP demonstration endpoints |
 
 ---
 
 ## 8. Running Automated Tests
 
-Run the complete PyTest test suite:
+Run the complete PyTest test suite (19 test cases):
 
 ```powershell
 pytest tests/ -v
 ```
 
-Run the model benchmark script:
+Run the model evaluation benchmark script:
 
 ```powershell
 python scripts/evaluate_models.py
@@ -227,3 +217,27 @@ python scripts/evaluate_models.py
 2. **Decision-Support Positioning**: TalentMatch AI is designed as a transparent decision-support tool for candidates and recruiters. It **must never automatically reject candidates**.
 3. **Privacy by Design**: Resume text is sanitized and processed strictly in-session or in local databases without sending data to third-party proprietary APIs.
 4. **Transparent Explainability**: Every score is paired with positive evidence and specific negative gaps ("Why did I get this score?").
+
+---
+
+## 10. Engineering Story & AI-Assisted Development
+
+As a Computer Science student at GITAM University, I built **TalentMatch AI** to solve a problem every aspiring engineer encounters: the opaque, keyword-reliant "black box" of modern Applicant Tracking Systems (ATS). Most hiring platforms either blindly filter candidates on exact keywords or rely on nondeterministic LLMs that hallucinate scoring explanations.
+
+### Development Approach:
+* **Algorithmic Core**: The multi-tier skill extraction, Levenshtein dynamic programming matrix, and 4-factor hybrid scoring formula were deliberately hand-architected and calibrated to reflect real-world hiring trade-offs.
+* **AI-Assisted Acceleration**: Modern AI pair-programming tools were leveraged as an accelerator for test case scaffolding (19 PyTest suites), synthetic benchmark pair curation, and API typing.
+* **Empirical Validation**: Benchmarking the multi-criteria engine against pure TF-IDF baselines proved an accuracy jump from **33.3% to 83.3%**, directly validating that semantic embeddings and syntactic action verbs are essential for fair resume screening.
+
+---
+
+## 11. Author & Contact
+
+**Kodakandla Sahithi**  
+*B.Tech in Computer Science and Engineering*  
+GITAM University, Visakhapatnam  
+
+* 🌐 **GitHub**: [@KodakandlaSahtihi-29](https://github.com/KodakandlaSahtihi-29)
+* 💼 **LinkedIn**: [sahithi-kodakandla](https://linkedin.com/in/sahithi-kodakandla)
+* 📧 **Email**: [sahithikodakandla594@gmail.com](mailto:sahithikodakandla594@gmail.com)
+

@@ -171,22 +171,33 @@ def get_analysis_by_id(analysis_id: int, db: Session = Depends(get_db)):
         created_at=record.created_at
     )
 
-@router.get("/academic/morphology")
+@router.get("/diagnostics/morphology", tags=["NLP Diagnostics"])
+@router.get("/academic/morphology", include_in_schema=False)
 def get_academic_morphology(text: str = Query("Developing scalable Python applications and APIs")):
+    """Compares WordNet lemmatization vs. Porter stemming."""
     return analyze_morphology_comparison(text)
 
-@router.get("/academic/edit-distance")
+@router.get("/diagnostics/edit-distance", tags=["NLP Diagnostics"])
+@router.get("/academic/edit-distance", include_in_schema=False)
 def get_academic_edit_distance(word1: str = Query("pyhton"), word2: str = Query("python")):
+    """Computes Levenshtein edit distance matrix and typo similarity."""
     return compute_edit_distance_demo(word1, word2)
 
-@router.get("/academic/pos-breakdown")
+@router.get("/diagnostics/pos-breakdown", tags=["NLP Diagnostics"])
+@router.get("/academic/pos-breakdown", include_in_schema=False)
 def get_academic_pos(text: str = Query("Candidate built high performance machine learning systems using PyTorch.")):
+    """Provides detailed Penn Treebank POS tag classification."""
     return analyze_pos_tags_detailed(text)
 
-@router.get("/academic/syntax-cky")
+@router.get("/diagnostics/syntax-structure", tags=["NLP Diagnostics"])
+@router.get("/academic/syntax-cky", include_in_schema=False)
 def get_academic_syntax(sentence: str = Query("The senior developer built reliable web services.")):
+    """Demonstrates constituent phrase structure (Noun Phrase / Verb Phrase chunking)."""
     return parse_syntax_cky_demo(sentence)
 
-@router.get("/academic/vector-neighbors")
+@router.get("/diagnostics/vector-neighbors", tags=["NLP Diagnostics"])
+@router.get("/academic/vector-neighbors", include_in_schema=False)
 def get_academic_vectors(word: str = Query("python")):
+    """Retrieves continuous vector space nearest neighbors using Word2Vec."""
     return analyze_vector_semantics_demo(word)
+

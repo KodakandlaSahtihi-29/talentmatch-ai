@@ -1,4 +1,8 @@
-"""Academic NLP Educational Module (Units 1 to 5 Reference Engine)."""
+"""NLP Diagnostics & Algorithmic Playground Utilities.
+
+Provides interactive inspection tools for morphology, edit distance matrices,
+POS syntactic distributions, constituent structures, and Word2Vec vector neighborhoods.
+"""
 import re
 from typing import List, Dict, Any, Tuple
 from collections import Counter
@@ -7,7 +11,7 @@ from app.services.pos_tagger import tag_pos
 from app.services.fuzzy_matcher import get_levenshtein_matrix
 from app.services.word2vec_engine import get_word_similarities
 
-# Penn Treebank POS tag reference glossary
+# Penn Treebank POS tag glossary for human-readable inspection
 PENN_TAG_GLOSSARY = {
     "NN": "Noun, singular or mass",
     "NNS": "Noun, plural",
@@ -29,7 +33,11 @@ PENN_TAG_GLOSSARY = {
 }
 
 def analyze_morphology_comparison(text: str) -> List[Dict[str, str]]:
-    """Unit 1: Demonstrates WordNet Lemmatization vs. Porter Stemming."""
+    """Compares WordNet Lemmatization vs Porter Stemming on candidate text.
+    
+    Why this matters: Stemming chops word endings aggressively (e.g. 'organization' -> 'organ'),
+    whereas WordNet lemmatization uses POS tags to map words back to real dictionary roots.
+    """
     tokens = tokenize_words(text)[:15]
     pos = tag_pos(tokens)
     lemmas = lemmatize_tokens(tokens, pos)
@@ -42,16 +50,16 @@ def analyze_morphology_comparison(text: str) -> List[Dict[str, str]]:
             "pos_tag": p[1],
             "lemma": l,
             "stem": s,
-            "notes": "WordNet dictionary root" if l != s else "Identical root"
+            "notes": "Preserves valid dictionary root" if l != s else "Identical reduction"
         })
     return results
 
 def compute_edit_distance_demo(word1: str, word2: str) -> Dict[str, Any]:
-    """Unit 1: Levenshtein dynamic programming matrix visualization."""
+    """Generates the full Levenshtein dynamic programming matrix and similarity score."""
     return get_levenshtein_matrix(word1, word2)
 
 def analyze_pos_tags_detailed(text: str) -> List[Dict[str, str]]:
-    """Unit 2: Detailed POS tag breakdown with Penn Treebank explanations."""
+    """Provides a detailed POS tag breakdown with Penn Treebank explanations."""
     tokens = tokenize_words(text)[:25]
     pos = tag_pos(tokens)
     
@@ -65,9 +73,9 @@ def analyze_pos_tags_detailed(text: str) -> List[Dict[str, str]]:
     return breakdown
 
 def parse_syntax_cky_demo(sentence: str) -> Dict[str, Any]:
-    """
-    Unit 3: Lightweight educational demo of Context-Free Grammar (CFG) / CKY Parsing concepts.
-    Demonstrates syntactic constituent reduction: S -> NP VP, NP -> Det N | N, VP -> V NP | V.
+    """Demonstrates constituent syntax structure (Noun Phrase vs Verb Phrase breakdown).
+    
+    Explains how phrase chunking is used in modern ATS systems rather than full parse trees.
     """
     words = [w.lower() for w in re.findall(r'\b\w+\b', sentence)]
     if not words:
@@ -75,8 +83,7 @@ def parse_syntax_cky_demo(sentence: str) -> Dict[str, Any]:
         
     pos = tag_pos(words)
     
-    # Educational simplified grammar rules
-    # N = Nouns, V = Verbs, D = Determiners/Adjectives
+    # Practical syntactic mapping
     simplified_tags = []
     for w, t in pos:
         if t.startswith('N'):
@@ -88,7 +95,7 @@ def parse_syntax_cky_demo(sentence: str) -> Dict[str, Any]:
         else:
             simplified_tags.append((w, 'Other'))
             
-    # Mock constituency tree representation
+    # Simple constituent representation
     tree_repr = f"(S\n  (NP {' '.join([w for w, tag in simplified_tags if tag in ['Noun', 'Modifier']])})\n  (VP {' '.join([w for w, tag in simplified_tags if tag == 'Verb'])})\n)"
     
     return {
@@ -97,18 +104,17 @@ def parse_syntax_cky_demo(sentence: str) -> Dict[str, Any]:
         "simplified_tags": simplified_tags,
         "parse_tree": tree_repr,
         "discussion": (
-            "In NLP Unit 3, Context-Free Grammars (CFGs) and probabilistic parsers (PCFG / CKY) "
-            "decompose sentence structure into hierarchical constituent phrase markers (Noun Phrase NP, Verb Phrase VP). "
-            "While deep syntactic trees handle structural ambiguity (e.g. PP attachment), talent matching predominantly "
-            "utilizes shallow phrase chunking and vector semantics for semantic alignment."
+            "Modern ATS systems analyze phrases (like 'scalable backend services' or 'deployed microservices') "
+            "as functional chunks (Noun Phrases / Verb Phrases). While deep syntactic parse trees are sensitive to "
+            "informal resume formatting, combining shallow phrase extraction with vector semantics yields highly robust results."
         )
     }
 
 def analyze_vector_semantics_demo(word: str) -> Dict[str, Any]:
-    """Unit 4: Vector semantics and Word2Vec neighboring words."""
+    """Retrieves top vector space nearest neighbors for a technical term via Word2Vec."""
     sims = get_word_similarities(word, top_n=6)
     return {
         "query_word": word,
         "nearest_neighbors": sims,
-        "concept": "Distributional semantics: words appearing in similar contexts acquire proximate vector representations."
+        "concept": "Distributional semantics: terms occurring in similar technical contexts (e.g. FastAPI and Flask) cluster together in the embedding space."
     }

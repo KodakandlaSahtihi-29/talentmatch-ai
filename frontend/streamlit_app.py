@@ -45,17 +45,55 @@ get_or_train_word2vec()
 # Sample Data Directory
 SAMPLE_DIR = BASE_DIR / "data" / "sample_data"
 
+# Sidebar: Developer Profile & Architecture Notes
+with st.sidebar:
+    st.markdown("### 🎯 TalentMatch AI")
+    st.markdown("""
+    An explainable talent intelligence engine built to eliminate keyword bias and black-box rejections in modern hiring.
+    """)
+    
+    st.markdown("---")
+    st.markdown("### 👩‍💻 Developer Profile")
+    st.markdown("""
+    **Sahithi Kodakandla**  
+    *B.Tech in Computer Science & Engineering*  
+    GITAM University, Visakhapatnam  
+    
+    [![GitHub](https://img.shields.io/badge/GitHub-KodakandlaSahtihi--29-181717?logo=github)](https://github.com/KodakandlaSahtihi-29/talentmatch-ai)  
+    [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sahithi--Kodakandla-0A66C2?logo=linkedin)](https://linkedin.com/in/sahithi-kodakandla)
+    """)
+    
+    st.markdown("---")
+    st.markdown("### ⚙️ Multi-Criteria Weights")
+    st.caption("Configured based on human recruiter evaluation experiments:")
+    st.progress(0.45, text="Skill Extraction: 45%")
+    st.progress(0.30, text="Word2Vec & TF-IDF: 30%")
+    st.progress(0.15, text="Experience Alignment: 15%")
+    st.progress(0.10, text="Education Relevance: 10%")
+    
+    st.markdown("---")
+    st.markdown("### 🛠️ Architecture Highlights")
+    st.markdown("""
+    - **NLTK & WordNet**: POS-guided lemmatization preserving dictionary roots.
+    - **Levenshtein DP**: Fuzzy edit distance recovering resume typos.
+    - **Gensim Word2Vec**: 100D dense continuous vector semantics.
+    - **FastAPI REST API**: Asynchronous backend serving endpoints.
+    """)
+
 # App Header
 st.markdown("""
 <div style="display: flex; align-items: center; justify-content: space-between; padding: 1rem 0; border-bottom: 1px solid #334155; margin-bottom: 1.5rem;">
     <div>
-        <h1 style="margin: 0; font-size: 1.9rem; font-weight: 800; color: #f8fafc; display: flex; align-items: center; gap: 10px;">
+        <h1 style="margin: 0; font-size: 1.95rem; font-weight: 800; color: #f8fafc; display: flex; align-items: center; gap: 10px;">
             <span>🎯 TalentMatch AI</span>
-            <span style="font-size: 0.75rem; background: #334155; color: #38bdf8; padding: 3px 8px; border-radius: 20px; font-weight: 600;">ENTERPRISE NLP</span>
+            <span style="font-size: 0.75rem; background: #1e293b; color: #38bdf8; border: 1px solid #38bdf840; padding: 3px 10px; border-radius: 20px; font-weight: 600;">PORTFOLIO EDITION</span>
         </h1>
         <p style="margin: 4px 0 0 0; color: #94a3b8; font-size: 0.95rem;">
             Explainable Candidate-Job Compatibility & Talent Intelligence Platform
         </p>
+        <div style="font-size: 0.85rem; color: #64748b; margin-top: 4px;">
+            Crafted by <a href="https://github.com/KodakandlaSahtihi-29" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Sahithi Kodakandla</a> • GITAM University
+        </div>
     </div>
     <div style="text-align: right;">
         <span style="display: inline-block; width: 8px; height: 8px; background: #10b981; border-radius: 50%; margin-right: 6px;"></span>
@@ -65,10 +103,10 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # Main Navigation Tabs
-tab_match, tab_history, tab_academic, tab_eval = st.tabs([
+tab_match, tab_history, tab_diagnostic, tab_eval = st.tabs([
     "📊 Match Analysis & Intelligence",
     "📜 Analysis History",
-    "🔬 Academic NLP Laboratory",
+    "🔬 NLP Diagnostics & Playground",
     "📈 Model Benchmark & Evaluation"
 ])
 
@@ -411,65 +449,71 @@ with tab_history:
         st.warning(f"Could not load database history: {e}")
 
 # ---------------------------------------------------------
-# TAB 3: ACADEMIC NLP LABORATORY (UNITS 1–5)
+# TAB 3: NLP DIAGNOSTICS & PLAYGROUND
 # ---------------------------------------------------------
-with tab_academic:
-    st.markdown("### 🔬 Academic NLP Curriculum Interactive Sandbox")
-    st.markdown("Live interactive demonstration of undergraduate Natural Language Processing concepts (Units 1 to 5).")
+with tab_diagnostic:
+    st.markdown("### 🔬 NLP Diagnostics & Algorithmic Playground")
+    st.markdown("Interactive inspection of the computational linguistics engines powering candidate-job matching.")
     
-    academic_mode = st.radio(
-        "Select NLP Unit Demonstration:",
+    diagnostic_mode = st.radio(
+        "Select Diagnostic Engine to Inspect:",
         [
-            "Unit 1: Morphology, Stemming vs Lemmatization & Edit Distance DP Matrix",
-            "Unit 2: POS Tagging & Penn Treebank Glossary Breakdown",
-            "Unit 3: Syntactic Analysis, Context-Free Grammar & CKY Concept Demo",
-            "Unit 4: Vector Semantics, Embeddings & Word2Vec Neighbor Algebra",
-            "Unit 5: Semantic Alignment & Text Coherence"
+            "🔤 Morphology & Lemmatization (WordNet vs Porter)",
+            "📐 Fuzzy Edit Distance Matrix (Levenshtein Typo Recovery)",
+            "🏷️ Syntactic Profiling & POS Action Verbs",
+            "🌐 Vector Embeddings & Word2Vec Latent Space",
+            "🎯 Sentence-Level Semantic Coherence"
         ]
     )
     
-    if "Unit 1" in academic_mode:
-        st.markdown("#### Unit 1: Morphology & Levenshtein Edit Distance Dynamic Programming")
+    if "Morphology" in diagnostic_mode:
+        st.markdown("#### 🔤 Morphology: Stemming (Porter) vs. Lemmatization (WordNet)")
+        st.caption("Why this matters: Porter stemming truncates suffixes mechanically, whereas WordNet lemmatization preserves actual dictionary lemmas using POS context.")
         col_u1a, col_u1b = st.columns(2)
         
         with col_u1a:
-            st.markdown("##### Stemming (Porter) vs Lemmatization (WordNet)")
             input_text = st.text_input("Enter text to tokenize and compare roots:", "Developing scalable python backend services optimized for performance")
             if input_text:
                 morph_res = analyze_morphology_comparison(input_text)
                 st.dataframe(pd.DataFrame(morph_res), use_container_width=True, hide_index=True)
                 
         with col_u1b:
-            st.markdown("##### Levenshtein Distance Matrix Visualizer")
-            w1 = st.text_input("Word 1 (Typo / Variant):", "pyhton")
-            w2 = st.text_input("Word 2 (Target Skill):", "python")
-            if w1 and w2:
-                matrix_data = compute_edit_distance_demo(w1, w2)
-                st.write(f"**Edit Distance:** `{matrix_data['distance']}` | **Normalized Similarity:** `{matrix_data['similarity']:.2f}`")
+            st.markdown("##### 💡 Engineering Takeaway")
+            st.info("""
+            In technical recruiting, naive stemming often ruins keyword search:
+            - `organizing` ➔ `organ` (stemmer removes `-izing`)
+            - `universal` ➔ `univers` (unrecognized root)
+            
+            TalentMatch AI pairs **WordNet lemmatization with POS tag mapping** so terms like `services` $\to$ `service` and `developed` $\to$ `develop` without corrupting technical nouns.
+            """)
                 
-                # Show DP Matrix
-                mat = np.array(matrix_data["matrix"])
-                df_mat = pd.DataFrame(mat, index=["#"] + list(w1), columns=["#"] + list(w2))
-                st.caption("Dynamic Programming Transition Matrix:")
-                st.dataframe(df_mat, use_container_width=True)
-                
-    elif "Unit 2" in academic_mode:
-        st.markdown("#### Unit 2: Part-of-Speech Tagging & Syntactic Elements")
-        pos_input = st.text_area("Input sentence for Penn Treebank POS analysis:", "The senior engineer implemented transformer models using PyTorch.")
+    elif "Fuzzy" in diagnostic_mode:
+        st.markdown("#### 📐 Levenshtein Edit Distance Dynamic Programming Matrix")
+        st.caption("How TalentMatch AI recovers typos and non-standard skill spellings in candidate resumes:")
+        
+        w1 = st.text_input("Candidate Resume Spelling (Typo / Variant):", "pyhton")
+        w2 = st.text_input("Target Skill in Job Description:", "python")
+        if w1 and w2:
+            matrix_data = compute_edit_distance_demo(w1, w2)
+            st.write(f"**Minimum Edit Operations:** `{matrix_data['distance']}` | **Normalized Similarity Score:** `{matrix_data['similarity']:.2f}` (Threshold: $\ge 0.82$)")
+            
+            # Show DP Matrix
+            mat = np.array(matrix_data["matrix"])
+            df_mat = pd.DataFrame(mat, index=["#"] + list(w1), columns=["#"] + list(w2))
+            st.caption("Dynamic Programming Cost Matrix ($D[i,j]$):")
+            st.dataframe(df_mat, use_container_width=True)
+            
+    elif "Syntactic" in diagnostic_mode:
+        st.markdown("#### 🏷️ Syntactic Profiling & POS Tag Breakdown")
+        st.caption("Analyzes the grammatical distribution and action-oriented strength of candidate statements:")
+        pos_input = st.text_area("Input candidate statement for POS analysis:", "The senior engineer architected transformer models and optimized PyTorch pipelines.")
         if pos_input:
             pos_results = analyze_pos_tags_detailed(pos_input)
             st.dataframe(pd.DataFrame(pos_results), use_container_width=True, hide_index=True)
             
-    elif "Unit 3" in academic_mode:
-        st.markdown("#### Unit 3: Syntactic Parsing & Context-Free Grammars (CFG)")
-        syntax_sentence = st.text_input("Enter sentence for constituency breakdown:", "The engineer developed high performance microservices.")
-        if syntax_sentence:
-            syntax_res = parse_syntax_cky_demo(syntax_sentence)
-            st.code(syntax_res["parse_tree"], language="text")
-            st.info(syntax_res["discussion"])
-            
-    elif "Unit 4" in academic_mode:
-        st.markdown("#### Unit 4: Vector Semantics & Word2Vec Word Proximity")
+    elif "Vector" in diagnostic_mode:
+        st.markdown("#### 🌐 Continuous Vector Space & Word2Vec Nearest Neighbors")
+        st.caption("Demonstrating distributional semantics: technical terms appearing in similar contexts cluster together.")
         w_query = st.text_input("Enter technical term to query nearest vector neighbors:", "python")
         if w_query:
             vec_res = analyze_vector_semantics_demo(w_query)
@@ -479,10 +523,11 @@ with tab_academic:
             else:
                 st.warning(f"Term '{w_query}' is Out-Of-Vocabulary (OOV) for the domain model.")
                 
-    elif "Unit 5" in academic_mode:
-        st.markdown("#### Unit 5: Semantic Coherence & Requirement Alignment")
-        s1 = st.text_input("Sentence A (Requirement):", "Build REST APIs with FastAPI and relational database backends.")
-        s2 = st.text_input("Sentence B (Candidate Evidence):", "Developed asynchronous Python microservices using FastAPI and PostgreSQL.")
+    elif "Coherence" in diagnostic_mode:
+        st.markdown("#### 🎯 Requirement Alignment & Sentence-Level Similarity")
+        st.caption("Evaluates whether candidate project bullets genuinely align with job responsibility requirements:")
+        s1 = st.text_input("Requirement Statement (from JD):", "Build REST APIs with FastAPI and relational database backends.")
+        s2 = st.text_input("Candidate Experience Evidence (from Resume):", "Developed asynchronous Python microservices using FastAPI and PostgreSQL.")
         if s1 and s2:
             s_res = compute_comprehensive_analysis(s1, s2, "Sentence A", "Sentence B")
             st.write(f"**Semantic Alignment Score:** `{s_res['semantic_similarity_score']:.1f}%`")
@@ -492,10 +537,10 @@ with tab_academic:
 # TAB 4: MODEL BENCHMARK & EVALUATION
 # ---------------------------------------------------------
 with tab_eval:
-    st.markdown("### 📈 Empirical Model Evaluation & Comparison Experiment")
+    st.markdown("### 📈 Empirical Model Evaluation & Comparison Benchmark")
     st.markdown("""
-    This benchmark executes an empirical comparison between **Lexical TF-IDF**, **Word2Vec Semantic Embeddings**,
-    **Hybrid Similarity**, and the **Full Multi-stage Pipeline** against ground-truth labeled evaluation pairs.
+    This benchmark runs an empirical validation comparing **Lexical TF-IDF**, **Word2Vec Semantic Embeddings**,
+    **Hybrid Similarity**, and the **Full Multi-criteria Pipeline** against ground-truth labeled candidate-job pairs.
     """)
     
     if st.button("▶️ Run Evaluation Benchmark Suite", type="primary"):
@@ -520,3 +565,19 @@ with tab_eval:
         st.markdown("#### Detailed Pair Evaluation Breakdown")
         df_eval_details = pd.DataFrame(eval_data["details"])
         st.dataframe(df_eval_details, use_container_width=True, hide_index=True)
+
+# ---------------------------------------------------------
+# DEVELOPER FOOTER
+# ---------------------------------------------------------
+st.markdown("""
+<div style="margin-top: 3.5rem; padding-top: 1.5rem; border-top: 1px solid #334155; text-align: center; color: #64748b; font-size: 0.85rem;">
+    <p style="margin-bottom: 0.35rem; color: #94a3b8;">
+        <strong>TalentMatch AI</strong> — Designed & Engineered by 
+        <a href="https://github.com/KodakandlaSahtihi-29" target="_blank" style="color: #38bdf8; text-decoration: none; font-weight: 600;">Sahithi Kodakandla</a>
+    </p>
+    <p style="margin: 0; font-size: 0.8rem; color: #64748b;">
+        B.Tech Computer Science & Engineering • GITAM University | Built with Python, FastAPI, NLTK, Gensim & Streamlit
+    </p>
+</div>
+""", unsafe_allow_html=True)
+
