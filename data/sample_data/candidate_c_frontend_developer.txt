@@ -1,0 +1,24 @@
+MORGAN LEE
+Email: morgan.lee@example.com | Portfolio: morganlee.dev | Location: New York, NY
+
+PROFESSIONAL SUMMARY
+Creative Frontend Web Developer with 4 years of experience crafting responsive, accessible, and high-performance user interfaces. Expert in React, Next.js, TypeScript, JavaScript, HTML5, CSS3, and Tailwind CSS.
+
+CORE SKILLS
+• Frontend Technologies: React, Next.js, TypeScript, JavaScript, HTML5, CSS3, Tailwind CSS, Redux, Svelte
+• UI/UX & Design: Responsive Web Design, Figma, Accessibility (a11y), Cross-Browser Compatibility
+• Tooling & Testing: Git, GitHub, Webpack, Vite, Jest, NPM
+• Backend Basics: Node.js, Express, REST API consumption
+
+PROFESSIONAL EXPERIENCE
+Frontend Developer | PixelCraft Interactive (2022 – Present)
+• Built dynamic web applications using React, Next.js, and TypeScript, delivering 60fps responsive interfaces.
+• Implemented state management architectures using Redux Toolkit and React Context API.
+• Designed pixel-perfect component systems with Tailwind CSS and CSS3 modules.
+
+Junior Web Developer | Apex Digital (2020 – 2022)
+• Developed responsive landing pages and interactive dashboards using JavaScript, HTML5, and CSS3.
+• Integrated client-side applications with RESTful APIs developed by the backend team.
+
+EDUCATION
+• Bachelor of Science in Information Systems — New York University (2020)

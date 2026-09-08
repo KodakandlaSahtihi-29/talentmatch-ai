@@ -1,0 +1,30 @@
+Python is a high-level programming language used extensively in data science, machine learning, artificial intelligence, and backend web development.
+Machine learning and deep learning involve training neural networks, transformers, BERT, GPT, and computer vision models using PyTorch, TensorFlow, and scikit-learn.
+Natural language processing, or NLP, focuses on text preprocessing, tokenization, lemmatization, stemming, POS tagging, n-grams, TF-IDF, Word2Vec embeddings, and sentiment analysis.
+Data engineers build scalable data pipelines, ETL workflows, data warehousing, and distributed data processing using Apache Spark, PySpark, Hadoop, Kafka, Airflow, and dbt.
+Backend software engineers design RESTful APIs, microservices, gRPC services, and asynchronous event-driven architectures using FastAPI, Flask, Django, Node.js, Express, and Spring Boot.
+Cloud computing platforms like AWS, Microsoft Azure, and Google Cloud Platform GCP provide scalable infrastructure including EC2, S3 buckets, Lambda serverless functions, and managed RDS databases.
+DevOps engineers automate continuous integration and continuous deployment CI/CD pipelines using Docker containers, Kubernetes orchestration, Helm charts, GitHub Actions, and Jenkins.
+Relational and NoSQL databases such as PostgreSQL, MySQL, MongoDB, Redis caching, Cassandra, Elasticsearch, and DynamoDB provide data persistence and indexing.
+Frontend web developers build responsive, interactive user interfaces using React, Next.js, Vue.js, Angular, TypeScript, JavaScript, HTML5, CSS3, and Tailwind CSS.
+FastAPI is a modern, high-performance web framework for building REST APIs with Python 3.8+ based on standard Python type hints and Pydantic data validation.
+PostgreSQL is a powerful, open-source object-relational database system with advanced indexing, JSON support, full-text search, and ACID compliance.
+PySpark is the Python API for Apache Spark, an open-source, distributed computing framework used for big data processing and large-scale data analytics.
+Scikit-learn is a Python library for classical machine learning algorithms including regression, classification, clustering, dimensionality reduction, and model evaluation.
+Gensim is an open-source library for unsupervised topic modeling, document indexing, similarity retrieval, and word embedding algorithms like Word2Vec and FastText.
+Word2Vec learns distributed semantic representations of words in continuous vector space using continuous bag of words CBOW or skip-gram architectures.
+TF-IDF, or term frequency-inverse document frequency, evaluates how important a word is to a document in a collection or corpus.
+Cosine similarity measures the cosine of the angle between two multi-dimensional vectors, evaluating lexical and semantic similarity between text documents.
+Levenshtein distance measures the minimum number of single-character edits required to change one word into another, enabling fuzzy matching.
+Software engineers follow agile methodologies, scrum practices, unit testing with PyTest, test-driven development TDD, system design principles, and code reviews.
+Object-oriented programming OOP, design patterns, clean architecture, SOLID principles, and data structures and algorithms form the foundation of robust software engineering.
+AWS Amazon Web Services offers cloud infrastructure, IAM permissions, VPC networks, S3 storage, ECS container services, and CloudFormation infrastructure as code.
+Kubernetes manages containerized workloads across server clusters with automated deployment, scaling, load balancing, and self-healing mechanisms.
+Deep learning architectures like recurrent neural networks, convolutional neural networks, and transformer attention mechanisms power modern speech, vision, and NLP applications.
+Data modeling, SQL query optimization, database indexing, foreign keys, transaction isolation levels, and data normalization ensure reliable storage.
+Microservices communicate over lightweight protocols such as HTTP REST APIs, message brokers like RabbitMQ or Apache Kafka, and high-speed gRPC channels.
+Large language models LLMs utilize multi-head self-attention mechanisms and transformer decoders to generate text, answer questions, and perform code generation.
+PyTest is a mature testing framework for Python supporting fixtures, parameterized tests, assertions, and mock integration testing.
+Docker packages applications and their dependencies into standardized containers, ensuring consistent environments across development and production.
+Git version control manages branching strategies, pull requests, merge conflict resolution, and collaborative software development on GitHub and GitLab.
+Document embeddings map variable-length sentences and paragraphs into dense numerical vectors for semantic search, clustering, and candidate ranking.

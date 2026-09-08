@@ -1,0 +1,26 @@
+# Python Bytecode and Cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Database and Cache
+*.db
+*.sqlite
+*.sqlite3
+talentmatch.db
+models_cache/
+.pytest_cache/
+
+# Streamlit and Logs
+.streamlit/
+*.log
+
+# OS Generated
+.DS_Store
+Thumbs.db

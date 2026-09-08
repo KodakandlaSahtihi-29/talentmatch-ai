@@ -1,0 +1,64 @@
+[
+  {
+    "id": "pair_01_ml_high",
+    "pair_name": "Senior ML Engineer Resume vs Senior ML Job",
+    "expected_category": "High",
+    "min_expected_score": 75.0,
+    "resume_text": "Experienced Machine Learning Engineer with 5+ years of experience in Python, PyTorch, Scikit-learn, and NLP. Built transformer models, BERT pipelines, and REST APIs using FastAPI. Proficient in SQL, PostgreSQL, Docker, and Git. Conducted hyperparameter tuning and model evaluation for enterprise search systems. Holds a Bachelor of Science in Computer Science.",
+    "jd_text": "We are seeking a Senior Machine Learning Engineer with strong expertise in Python, Machine Learning, Deep Learning, and NLP. Requirements include experience with PyTorch or TensorFlow, scikit-learn, FastAPI or Flask for REST APIs, SQL, PostgreSQL, and Docker. Experience with BERT or LLMs is a plus. BS in Computer Science or related field required.",
+    "expected_matched_skills": ["python", "machine learning", "deep learning", "nlp", "pytorch", "scikit-learn", "fastapi", "sql", "postgresql", "docker", "git"],
+    "expected_missing_skills": []
+  },
+  {
+    "id": "pair_02_ml_medium",
+    "pair_name": "ML Engineer with PySpark & Cloud Gap",
+    "expected_category": "Medium",
+    "min_expected_score": 50.0,
+    "max_expected_score": 75.0,
+    "resume_text": "Machine Learning Practitioner with expertise in Python, SQL, Scikit-learn, NLP, and FastAPI. Built predictive modeling systems and deployed PostgreSQL databases. Strong background in data preprocessing, tokenization, and TF-IDF similarity algorithms. B.S. in Computer Science.",
+    "jd_text": "Looking for a Senior ML Engineer. Required skills: Python, Machine Learning, NLP, FastAPI, SQL, PySpark, and AWS. Must have hands-on experience with distributed data processing using PySpark and cloud deployment on AWS EC2/S3. Preferred: Docker, Kubernetes.",
+    "expected_matched_skills": ["python", "machine learning", "nlp", "fastapi", "sql"],
+    "expected_missing_skills": ["pyspark", "aws", "kubernetes"]
+  },
+  {
+    "id": "pair_03_backend_high",
+    "pair_name": "Backend Python Engineer vs Backend FastAPI Job",
+    "expected_category": "High",
+    "min_expected_score": 78.0,
+    "resume_text": "Backend Software Engineer specializing in Python, FastAPI, Django, PostgreSQL, and Redis. Designed microservices and asynchronous RESTful APIs. Implemented CI/CD pipelines using Docker, GitHub Actions, and AWS ECS. Proficient in unit testing with PyTest and agile scrum development.",
+    "jd_text": "Senior Backend Developer needed to build high-performance microservices. Required: Python, FastAPI or Django, REST API design, PostgreSQL, Redis caching, and Docker. Must have experience with GitHub Actions, AWS cloud services, and PyTest unit testing.",
+    "expected_matched_skills": ["python", "fastapi", "django", "postgresql", "redis", "rest api", "docker", "github actions", "aws", "pytest"],
+    "expected_missing_skills": []
+  },
+  {
+    "id": "pair_04_cross_domain_low",
+    "pair_name": "Frontend React Dev vs Data Engineer Spark Job",
+    "expected_category": "Low",
+    "max_expected_score": 45.0,
+    "resume_text": "Frontend Web Developer with 4 years creating responsive user interfaces with React, Next.js, TypeScript, JavaScript, HTML5, CSS3, and Tailwind CSS. State management with Redux. Basic knowledge of Node.js and Express. Passionate about UI/UX design and client-side performance.",
+    "jd_text": "Senior Data Engineer needed for Big Data infrastructure. Must have strong experience with Apache Spark, PySpark, Hadoop, Kafka, Airflow, and Python. Experience with data warehousing on Snowflake and SQL ETL pipelines. Cloud experience with AWS or GCP required.",
+    "expected_matched_skills": [],
+    "expected_missing_skills": ["spark", "pyspark", "hadoop", "kafka", "airflow", "snowflake", "sql", "aws", "gcp"]
+  },
+  {
+    "id": "pair_05_data_analyst_medium",
+    "pair_name": "Data Analyst vs BI & Analytics Job",
+    "expected_category": "Medium",
+    "min_expected_score": 55.0,
+    "max_expected_score": 78.0,
+    "resume_text": "Data Analyst proficient in Python, SQL, Pandas, NumPy, Tableau, and data visualization. Created executive dashboards, automated reporting scripts, and performed statistical data modeling. Bachelor of Technology in Information Technology.",
+    "jd_text": "Business Intelligence & Data Analyst wanted. Requirements: SQL, Python, Pandas, Tableau or Power BI, Data Warehousing, ETL processes, and Snowflake. Experience with statistical modeling and executive presentation.",
+    "expected_matched_skills": ["python", "sql", "pandas", "numpy", "tableau", "data modeling"],
+    "expected_missing_skills": ["power bi", "data warehousing", "etl", "snowflake"]
+  },
+  {
+    "id": "pair_06_unrelated_low",
+    "pair_name": "Graphic Designer vs Cloud DevOps Architect",
+    "expected_category": "Low",
+    "max_expected_score": 30.0,
+    "resume_text": "Creative Graphic Designer with skills in Adobe Photoshop, Illustrator, Figma, UI/UX wireframing, color theory, typography, and brand identity design. Produced marketing materials, website mockups, and digital illustrations for corporate clients.",
+    "jd_text": "Principal DevOps & Cloud Architect. Mandatory requirements: Kubernetes, Docker, Terraform, AWS, Azure, CI/CD with Jenkins, Prometheus, Grafana, Linux kernel tuning, and Python scripting.",
+    "expected_matched_skills": [],
+    "expected_missing_skills": ["kubernetes", "docker", "terraform", "aws", "azure", "jenkins", "prometheus", "grafana", "linux", "python"]
+  }
+]

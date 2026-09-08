@@ -1,0 +1,25 @@
+SENIOR MACHINE LEARNING ENGINEER
+Company: QuantumAI Solutions | Location: San Francisco, CA / Remote
+
+ROLE OVERVIEW
+We are seeking an experienced Senior Machine Learning Engineer to join our core AI Intelligence team. You will lead the research, development, and production deployment of natural language processing (NLP), deep learning models, and big data architectures.
+
+CORE RESPONSIBILITIES
+• Design, train, and deploy state-of-the-art machine learning and deep learning models for text processing and semantic matching.
+• Build scalable REST APIs and microservices using Python and FastAPI or Flask.
+• Architect distributed data pipelines using PySpark and Apache Spark for large-scale document analytics.
+• Deploy and maintain containerized ML services in the cloud using AWS (EC2, S3) and Docker.
+• Collaborate with cross-functional product and engineering teams in an agile environment.
+
+MANDATORY REQUIREMENTS
+• Strong proficiency in Python and classical machine learning libraries (scikit-learn, PyTorch, or TensorFlow).
+• Proven track record in Natural Language Processing (NLP) techniques: tokenization, lemmatization, TF-IDF, embeddings, and transformers.
+• Hands-on experience building production REST APIs using FastAPI or Flask.
+• Proficiency in SQL and relational database systems (PostgreSQL).
+• Hands-on experience with big data processing using PySpark.
+• Cloud computing experience with AWS.
+• Bachelor of Science in Computer Science or related engineering field.
+
+PREFERRED QUALIFICATIONS (PLUS)
+• Familiarity with Docker containerization and Kubernetes orchestration.
+• Experience with LLMs, BERT, or vector databases.

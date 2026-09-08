@@ -1,0 +1,15 @@
+SENIOR BACKEND SOFTWARE ENGINEER
+Company: NovaCloud Systems | Location: Austin, TX / Remote
+
+ABOUT THE POSITION
+We are looking for a Senior Backend Software Engineer to design, scale, and maintain our enterprise microservices platform.
+
+REQUIREMENTS & QUALIFICATIONS
+• 4+ years of professional backend engineering experience with Python.
+• Strong experience with FastAPI or Django building asynchronous RESTful APIs.
+• Deep understanding of PostgreSQL database design, indexing, and query optimization.
+• Hands-on experience with in-memory caching systems such as Redis.
+• Proficiency with Docker containerization and CI/CD automation using GitHub Actions.
+• Experience deploying services on AWS cloud infrastructure.
+• Commitment to unit testing, test-driven development (TDD), and PyTest.
+• Bachelor's degree in Computer Science or equivalent practical experience.

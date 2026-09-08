@@ -1,0 +1,27 @@
+ALEX RIVERA
+Email: alex.rivera@example.com | GitHub: github.com/alexrivera-ml | Location: San Francisco, CA
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning Engineer with 5+ years of experience designing and deploying scalable natural language processing (NLP) and deep learning models in production. Demonstrated expertise in Python, PyTorch, Scikit-learn, and FastAPI backend services with PostgreSQL data persistence.
+
+CORE SKILLS & TECHNOLOGIES
+• Programming & Frameworks: Python, SQL, C++, PyTorch, Scikit-learn, TensorFlow, HuggingFace
+• NLP & Machine Learning: Natural Language Processing, BERT, Transformers, Word2Vec, TF-IDF, Feature Engineering
+• Backend & APIs: FastAPI, Flask, REST API, Microservices, Asynchronous Tasks
+• Databases & Storage: PostgreSQL, Redis, Vector Databases, SQLite
+• DevOps & Practices: Docker, Git, CI/CD, PyTest, Agile, Unit Testing
+
+PROFESSIONAL EXPERIENCE
+Senior Machine Learning Engineer | NeuralScale Technologies (2022 – Present)
+• Architected enterprise semantic document retrieval engine using PyTorch, BERT transformers, and FastAPI, improving search precision by 34%.
+• Built distributed feature engineering pipelines using Python and Scikit-learn, processing 2M+ daily text documents.
+• Designed RESTful microservices wrapped in Docker containers with PostgreSQL and Redis caching.
+• Mentored 4 junior engineers on NLP preprocessing, tokenization, and model evaluation metrics.
+
+Machine Learning Developer | DataFlow Systems (2019 – 2022)
+• Developed text classification and entity extraction models using NLTK and Scikit-learn.
+• Automated model deployment pipelines using Git and Docker, reducing deployment turnaround by 45%.
+• Executed SQL queries and database schema migrations on PostgreSQL databases.
+
+EDUCATION & CERTIFICATIONS
+• Bachelor of Science in Computer Science — University of California, Berkeley (2019)
