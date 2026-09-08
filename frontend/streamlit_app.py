@@ -60,7 +60,7 @@ with st.sidebar:
     GITAM University, Visakhapatnam  
     
     [![GitHub](https://img.shields.io/badge/GitHub-KodakandlaSahtihi--29-181717?logo=github)](https://github.com/KodakandlaSahtihi-29/talentmatch-ai)  
-    [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sahithi--Kodakandla-0A66C2?logo=linkedin)](https://linkedin.com/in/sahithi-kodakandla)
+    [![LinkedIn](https://img.shields.io/badge/LinkedIn-Sahithi--Kodakandla-0A66C2?logo=linkedin)](https://www.linkedin.com/in/sahithi-kodakandla-7ba166293/)
     """)
     
     st.markdown("---")

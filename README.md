@@ -8,7 +8,7 @@
 
 > **Designed & Engineered by [Sahithi Kodakandla](https://github.com/KodakandlaSahtihi-29)**  
 > *B.Tech in Computer Science and Engineering — GITAM University, Visakhapatnam*  
-> [GitHub](https://github.com/KodakandlaSahtihi-29) • [LinkedIn](https://linkedin.com/in/sahithi-kodakandla) • [Email](mailto:sahithikodakandla594@gmail.com)
+> [GitHub](https://github.com/KodakandlaSahtihi-29) • [LinkedIn](https://www.linkedin.com/in/sahithi-kodakandla-7ba166293/) • [Email](mailto:sahithikodakandla594@gmail.com)
 
 **TalentMatch AI** is an explainable Natural Language Processing (NLP) intelligence platform that analyzes candidate resumes against Job Descriptions (JDs) to deliver a **transparent, multi-dimensional compatibility assessment**, skill-gap diagnosis, and actionable career recommendations.
 
@@ -238,6 +238,6 @@ As a Computer Science student at GITAM University, I built **TalentMatch AI** to
 GITAM University, Visakhapatnam  
 
 * 🌐 **GitHub**: [@KodakandlaSahtihi-29](https://github.com/KodakandlaSahtihi-29)
-* 💼 **LinkedIn**: [sahithi-kodakandla](https://linkedin.com/in/sahithi-kodakandla)
+* 💼 **LinkedIn**: [sahithi-kodakandla](https://www.linkedin.com/in/sahithi-kodakandla-7ba166293/)
 * 📧 **Email**: [sahithikodakandla594@gmail.com](mailto:sahithikodakandla594@gmail.com)
 
